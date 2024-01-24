@@ -64,7 +64,7 @@ def grfdrw(z):
     grf = pd.Series(arr)
     smin = grf.min()
     smax = grf.max()
-    if grf[idx] == 'NaN':
+    if np.isnan(grf[idx]):
         srct = grf[idx-1]
     else :
         srct = grf[idx]
